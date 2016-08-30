@@ -44,12 +44,14 @@ public class Phone {
     }
 
     public void call(String phoneNumber) {
-        System.out.println(String.format("call on %s number", phoneNumber));
+        System.out.println(String.format("call on %s number from %s",
+                phoneNumber, this.getClass().getCanonicalName()));
         phoneCalls++;
     }
 
     public void sendMessage(String phoneNumber, String textMessage) {
-        System.out.println(String.format("send message on %s with text < %s >", phoneNumber, textMessage));
+        System.out.println(String.format("send message on %s with text < %s > from %s",
+                phoneNumber, textMessage, this.getClass().getCanonicalName()));
         phoneMessages++;
     }
 
